@@ -386,7 +386,6 @@ end
 
 helper :cache_data do |user|
   `curl -s -L -H 'Authorization: token #{github_token}' #{network_meta_for(user)} -o #{network_cache_path}`
-  STDERR.puts "curl -s -L -H 'Authorization: token #{github_token}' #{network_meta_for(user)} -o #{network_cache_path}"
   get_cache
 end
 
